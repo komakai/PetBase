@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbar_height">42dp</dimen>
+    <dimen name="toolbar_text_height">20dp</dimen>
+    <dimen name="home_side_margin">18dp</dimen>
+    <dimen name="toolbar_separator_height">1.5dp</dimen>
+    <dimen name="button_area_height">50dp</dimen>
+    <dimen name="button_height">45dp</dimen>
+    <dimen name="button_text_height">18dp</dimen>
+    <dimen name="office_hours_outline_width">1.5dp</dimen>
+    <dimen name="office_hours_height">60dp</dimen>
+    <dimen name="office_hours_vertical_margin">6dp</dimen>
+    <dimen name="office_hours_text_size">16dp</dimen>
+    <dimen name="pet_divider_height">1dp</dimen>
+    <dimen name="list_row_height">100dp</dimen>
+    <dimen name="list_row_vertical_margin">4dp</dimen>
+    <dimen name="pet_image_height">92dp</dimen>
+    <dimen name="pet_image_width">92dp</dimen>
+    <dimen name="list_entry_text_left_offset">20dp</dimen>
+    <dimen name="list_entry_text_height">24dp</dimen>
+    <dimen name="toolbar_back_button_dimension">34dp</dimen>
+</resources>

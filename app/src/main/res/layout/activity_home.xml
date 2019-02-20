@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.home.HomeActivity">
+
+    <include layout="@layout/toolbar_home"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/home_side_margin"
+            android:layout_marginRight="@dimen/home_side_margin"
+            android:orientation="vertical">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_area_height"
+                android:orientation="horizontal"
+                android:id="@+id/buttonArea">
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_weight="10"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/chat_button_background"
+                    android:text="@string/chat_button_text"
+                    android:textSize="@dimen/button_text_height"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="false"
+                    android:enabled="false"
+                    android:id="@+id/chatButton"/>
+            <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/buttonSpacer"/>
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_weight="10"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/call_button_background"
+                    android:text="@string/call_button_text"
+                    android:textSize="@dimen/button_text_height"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="false"
+                    android:enabled="false"
+                    android:id="@+id/callButton"/>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/office_hours_height">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/office_hours_vertical_margin"
+                    android:layout_marginBottom="@dimen/office_hours_vertical_margin"
+                    android:background="@drawable/office_hours_background"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/button_text_height"
+                    android:text="@string/office_hours_initial"
+                    android:id="@+id/officeHoursText"/>
+        </LinearLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pet_divider_height"
+                android:background="@color/SeparatorGray"/>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/swipeRefresh">
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:id="@+id/petList"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

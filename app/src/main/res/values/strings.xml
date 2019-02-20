@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PetBase</string>
+    <string name="chat_button_text">Chat</string>
+    <string name="call_button_text">Call</string>
+    <string name="office_hours_initial">Office Hours: ---</string>
+    <string name="office_hours_label" formatted="false">Office Hours: %1$s</string>
+    <string name="pet_info_label">Pet Info</string>
+    <string name="message_in_hours">Thank you for getting in touch with us. We’ll get back to you as soon as possible.</string>
+    <string name="message_out_of_hours">Work hours has ended. Please contact us again on the next work day.</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/white">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:orientation="horizontal">
+        <ImageView
+                android:layout_width="@dimen/toolbar_back_button_dimension"
+                android:layout_height="@dimen/toolbar_back_button_dimension"
+                android:layout_marginLeft="2dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/back"
+                android:id="@+id/backButton"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_height"
+                android:layout_gravity="center"
+                android:paddingRight="@dimen/toolbar_back_button_dimension"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/toolbar_text_height"
+                android:id="@+id/petInfoTitle"/>
+    </LinearLayout>
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_separator_height"
+            android:background="@color/SeparatorGray"/>
+
+</LinearLayout>
