@@ -59,6 +59,11 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        updateConfig()
+        refreshPetList()
+    }
+
+    fun updateConfig() {
         compositeDisposable.add(execApi((application as PetBaseApp).apiClient.getConfig()) { config ->
             // buttons are disabled until we get the config. Button hiding/unhiding logic is below
             chatButton.isEnabled = true
@@ -70,7 +75,6 @@ class HomeActivity : AppCompatActivity() {
             officeHoursText.text = getString(R.string.office_hours_label, config.workHours)
             officeHours = OpeningHours.parseWorkHours(config.workHours)
         })
-        refreshPetList()
     }
 
     private fun refreshPetList() {

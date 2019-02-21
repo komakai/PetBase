@@ -8,7 +8,7 @@ import org.junit.Test
 import org.junit.Assert.*
 import java.util.*
 
-class TimeHelperTest {
+class TestTimeHelper {
 
     @Test
     fun testTimeRanges() {

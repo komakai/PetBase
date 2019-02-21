@@ -25,7 +25,7 @@ open class PetBaseApp: MultiDexApplication() {
         Picasso.setSingletonInstance(built)
     }
 
-    protected fun initApiClient() {
+    open fun initApiClient() {
         apiClient = ApiClientManager.apiClient
     }
 }

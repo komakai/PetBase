@@ -12,7 +12,7 @@ android {
         multiDexEnabled true
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "net.telepathix.petbase.PetBaseTestRunner"
     }
     buildTypes {
         release {
@@ -66,11 +66,9 @@ dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.arch.core:core-common:2.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
-    implementation 'com.google.android.material:material:1.0.0-rc01'
+    implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
-    implementation 'com.android.support:multidex:1.0.3'
-
-    implementation "com.google.code.gson:gson:${gson}"
+    implementation 'androidx.multidex:multidex:2.0.0'
 
     // Retrofit2
     implementation "com.squareup.retrofit2:retrofit:${retrofit}"
@@ -90,23 +88,15 @@ dependencies {
     implementation "com.fasterxml.jackson.module:jackson-module-kotlin:${jackson}"
 
     // Picasso
-    implementation 'com.squareup.picasso:picasso:2.71828'
-
-    // include JUnit 5 assertions
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.2.0'
-    // include JUnit 5 test engine
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.2.0'
-
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
-    androidTestImplementation('androidx.test:runner:1.1.0-beta02', {
+    implementation('com.squareup.picasso:picasso:2.71828', {
         exclude group: "com.android.support", module: "support-annotations"
     })
-    androidTestImplementation 'androidx.test:rules:1.1.1'
+
     kapt 'com.android.databinding:compiler:3.1.4'
 
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
-
+    testImplementation "androidx.test.ext:junit:1.1.0"
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    androidTestImplementation 'androidx.test:rules:1.1.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
 }
